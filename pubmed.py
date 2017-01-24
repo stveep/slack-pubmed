@@ -67,12 +67,13 @@ class Record:
         self.get()
         if self.title() and self.source():
             return json.dumps({ "attachments": [{"title": self.title(),
-                                            "title_link": self.to_url(),
-                                            "text": self.author_string(),
-                                            "fields": [{"title": self.source()}]}],
+                                                "title_link": self.to_url(),
+                                                "text": self.author_string(),
+                                                "fields": [{"title": self.source()}]
+                                                }],
                                 "icon_emoji": random.choice(emojis),
                                 "username": username
-                                            })
+                                })
 
 class SearchResult:
 
